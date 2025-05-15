@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my_python_package"
+version = "0.1.0"
+description = "A sample Python package"
+readme = "README.md"
+authors = [
+    {name = "Dave", email = "da@local.com"},
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.28.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "isort>=5.10.0",
+    "mypy>=0.961",
+    "flake8>=4.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/my_python_package"
+"Bug Tracker" = "https://github.com/yourusername/my_python_package/issues"
+
+[project.scripts]
+my-command = "my_python_package.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"
