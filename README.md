@@ -1,4 +1,4 @@
-# Python_AWSCLIPython AWS CLI Tool
+# Python AWS CLI Tool
 A command-line interface tool for managing AWS resources using Python and Typer.
 
 Overview
